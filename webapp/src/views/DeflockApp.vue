@@ -61,6 +61,11 @@
                   <v-icon icon="mdi-open-in-new" size="small" class="ml-1" />
                 </v-btn>
               </div>
+              <p class="hero-note">
+                Submitting or editing map data requires signing up for a free
+                <a href="https://wiki.openstreetmap.org/wiki/About_OpenStreetMap" target="_blank">OpenStreetMap</a> account.
+                You can <a href="https://www.openstreetmap.org/user/new" target="_blank">sign up here</a> with just an email address.
+              </p>
             </div>
           </v-col>
           <v-col cols="12" md="6" class="hero-image">
@@ -819,6 +824,18 @@ const visibleScreenshots = computed(() =>
 .cta-note {
   font-size: 0.875rem;
   opacity: 0.7;
+}
+
+.hero-note {
+  margin-top: 24px;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+/* The hero sits on a dark gradient, so the default link blue is unreadable. */
+.hero-note a {
+  color: inherit;
+  text-decoration: underline;
 }
 
 /* Responsive Design */

@@ -10,6 +10,15 @@
       </v-col>
     </v-row>
 
+    <v-row justify="center" class="mb-4">
+      <v-col cols="12" md="8">
+        <v-alert variant="tonal" type="info" density="comfortable">
+          DeFlock uses <b><a href="https://wiki.openstreetmap.org/wiki/About_OpenStreetMap" target="_blank">OpenStreetMap</a></b> data;
+          you'll need to <a href="https://www.openstreetmap.org/user/new" target="_blank">create an OpenStreetMap account</a> to make submissions.
+        </v-alert>
+      </v-col>
+    </v-row>
+
     <!-- ALPR Identification Warning -->
     <v-row justify="center" class="mb-8">
       <v-col cols="12" class="text-center">
