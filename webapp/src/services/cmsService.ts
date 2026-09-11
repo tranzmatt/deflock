@@ -27,7 +27,7 @@ const cmsApiService = axios.create({
 export const cmsService = {
 	async getChapters(): Promise<Chapter[]> {
 		try {
-			const response = await cmsApiService.get("/items/chapters?sort=name");
+			const response = await cmsApiService.get("/items/chapters?sort=name&limit=-1");
 			return response.data.data;
 		} catch (error) {
 			console.error("Error fetching chapters:", error);
@@ -36,7 +36,7 @@ export const cmsService = {
 	},
 	async getLprVendors(): Promise<LprVendor[]> {
 		try {
-			const response = await cmsApiService.get("/items/lprVendors");
+			const response = await cmsApiService.get("/items/lprVendors?limit=-1");
 			return response.data.data as LprVendor[];
 		} catch (error) {
 			console.error("Error fetching LPR vendors:", error);
@@ -46,7 +46,7 @@ export const cmsService = {
 	async getOtherSurveillanceDevices(): Promise<OtherSurveillanceDevice[]> {
 		try {
 			const response = await cmsApiService.get(
-				"/items/otherSurveillanceDevices?fields=*,images.*"
+				"/items/otherSurveillanceDevices?fields=*,images.*&limit=-1"
 			);
 			return response.data.data.map((item: OtherSurveillanceDevice & { images?: { directus_files_id: string }[] }) => ({
 				...item,

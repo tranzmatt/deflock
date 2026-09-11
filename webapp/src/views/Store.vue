@@ -731,7 +731,7 @@ const fetchPrintables = async (): Promise<void> => {
   try {
     loading.value = true;
     error.value = null;
-    const response = await fetch('https://cms.deflock.me/items/Printables');
+    const response = await fetch('https://cms.deflock.me/items/Printables?limit=-1');
     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
     const data: CMSResponse = await response.json();
     printables.value = data.data || [];
